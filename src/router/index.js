@@ -5,7 +5,6 @@ import IndexPage from '@/components/IndexPage'
 import My from '@/components/My'
 
 Vue.use(Router)
-
 export default new Router({
   routes: [
     {

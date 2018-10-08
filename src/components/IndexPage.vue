@@ -31,10 +31,8 @@
       onAddShop: function () {
         let that = this
         that.$store.dispatch('addItem',that.newShopData).then((success) => {
-          console.log(that.$store.state.shop)
+          console.log(that.$store.state.shops)
           alert('添加成功！')
-          that.newShopData.name = ''
-          that.newShopData.snum = ''
         })
       }
     }

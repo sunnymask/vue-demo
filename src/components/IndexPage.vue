@@ -29,8 +29,12 @@
     },
     methods: {
       onAddShop: function () {
-        this.$store.dispatch('addItem',this.newShopData).then((success) => {
-          console.log(this.$store.state.shop)
+        let that = this
+        that.$store.dispatch('addItem',that.newShopData).then((success) => {
+          console.log(that.$store.state.shop)
+          alert('添加成功！')
+          that.newShopData.name = ''
+          that.newShopData.snum = ''
         })
       }
     }

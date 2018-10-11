@@ -4,7 +4,9 @@ Vue.use(Vuex)
 
 const store = new Vuex.Store({
   state: {
-    shops: []
+    shops: [],
+    po:{},
+    news: []
   },
   mutations: {
     initShops: function (state, shops) {
@@ -15,6 +17,12 @@ const store = new Vuex.Store({
     },
     deleteShops: function (state, index) {
       state.shops.splice(index,1)
+    },
+    initPo: function (state, po) {
+        state.po = po
+    },
+    initNews: function (state, news) {
+        state.news = news
     }
   },
   actions: {

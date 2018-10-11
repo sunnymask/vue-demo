@@ -33,6 +33,15 @@ export default {
       imgSrc: imgSrc
     }
   },
+    beforeCreate() {
+        this.$Progress.start()
+    },
+    mounted() {
+      let that = this
+      setTimeout(function () {
+          that.$Progress.fail()
+      },5000)
+    },
   methods: {
     toLoginBtn: function () {
       if (!this.user || this.user === '') {

@@ -54,7 +54,7 @@ export default {
         alert("账号或密码错误!");
         return;
       }else {
-        this.$router.push('/index')
+        this.$router.push('/my')
       }
     }
   }

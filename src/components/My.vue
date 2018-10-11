@@ -80,8 +80,18 @@
 </script>
 
 <style scoped>
+    .My {
+        width: 100%;
+        overflow: hidden;
+    }
     .nav-tabs {
         width: 500px;
         margin: 0 auto 10px;
+    }
+    .transitionRouter-enter-active {
+        transition: all 0.4s;
+    }
+    .transitionRouter-enter {
+        transform: translate(100%, 0);
     }
 </style>

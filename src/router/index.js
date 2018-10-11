@@ -6,7 +6,6 @@ import My from '@/components/My'
 
 Vue.use(Router)
 export default new Router({
-    mode: 'history',
   routes: [
     {
       path: '/',

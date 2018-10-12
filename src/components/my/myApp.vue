@@ -35,6 +35,7 @@
                     lastName: 'Flintstone'
                 }*/).then(function (response) {
                     if (response.data.code == '200') {
+                        that.$store.commit('initPo', response.data.result)
                         that.myJson = response.data.result
                         that.pJson = that.myJson.content.split('|')
                     }

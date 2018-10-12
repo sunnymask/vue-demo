@@ -45,7 +45,7 @@
           }).catch(function (error) {
               console.log(error);
           })
-          that.$axios.get('/recommendPoetry', /*{
+          that.$axios.post('/recommendPoetry', /*{
                 firstName: 'Fred',
                 lastName: 'Flintstone'
             }*/).then(function (response) {

@@ -10,7 +10,15 @@ module.exports = {
     // Paths
     assetsSubDirectory: 'static',
     assetsPublicPath: '/',
-    proxyTable: {},
+    proxyTable: {
+      '/recommendPoetry': {
+        target: 'http://api.apiopen.top',
+        changeOrigin: true,
+        pathRewrite: {
+          '^/recommendPoetry': '/recommendPoetry'
+        }
+      }
+    },
 
     // Various Dev Server settings
     host: 'localhost', // can be overwritten by process.env.HOST

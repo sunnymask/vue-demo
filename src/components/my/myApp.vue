@@ -30,7 +30,7 @@
         methods: {
             refresh: function() {
                 let that = this
-                that.$axios.post('http://api.apiopen.top/recommendPoetry', /*{
+                that.$axios.post('/recommendPoetry', /*{
                     firstName: 'Fred',
                     lastName: 'Flintstone'
                 }*/).then(function (response) {

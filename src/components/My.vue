@@ -45,7 +45,7 @@
           }).catch(function (error) {
               console.log(error);
           })
-          that.$axios.get('http://api.apiopen.top/recommendPoetry', /*{
+          that.$axios.get('/recommendPoetry', /*{
                 firstName: 'Fred',
                 lastName: 'Flintstone'
             }*/).then(function (response) {

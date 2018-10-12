@@ -12,10 +12,10 @@ module.exports = {
     assetsPublicPath: '/',
     proxyTable: {
       '/recommendPoetry': {
-        target: 'http://api.apiopen.top',
+        target: 'http://api.apiopen.top/recommendPoetry',
         changeOrigin: true,
         pathRewrite: {
-          '^/recommendPoetry': '/recommendPoetry'
+          '^/recommendPoetry': ''
         }
       }
     },

@@ -1,6 +1,6 @@
 <template>
     <div class="IndexPage">
-        <headerCom :imgSrc="imgSrc" :styleType=true></headerCom>
+        <headerCom :imgSrc="img" :styleType=true></headerCom>
         <div class="tilte">
             <h1>这是首页</h1>
         </div>
@@ -18,12 +18,14 @@
 </template>
 
 <script>
-  import imgSrc from '@/assets/me.jpg'
+    import imgSrc from '@/assets/me.jpg'
+    import shop from '../assets/shop.png'
   export default {
     name: 'IndexPage',
     data() {
       return {
-        imgSrc: imgSrc,
+        imgSrc: shop,
+          img: shop,
         newShopData: {}
       }
     },

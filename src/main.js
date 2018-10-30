@@ -6,12 +6,15 @@ import router from './router'
 import './assets/bootstrap-3.3.7-dist/css/bootstrap.css'
 import store from './store'
 import axios from 'axios'
+import { Indicator, Lazyload } from 'mint-ui'
 //通过components下Publi里的index.js文件导入组件
 import components from './components/Public/index'
 import shopData from '@/data/shopData.json'
 import VueProgressBar from 'vue-progressbar'
+import errorP from './assets/error.png'
 
 Vue.prototype.$axios = axios
+Vue.prototype.defaultImg = errorP
 Vue.use(VueProgressBar, {
     color: 'rgb(53,73,94)',
     failedColor: 'black',
@@ -22,7 +25,11 @@ Object.keys(components).forEach((key) => {
   Vue.component(key, components[key])
 });
 Vue.config.productionTip = false
-
+Vue.use(Lazyload , {
+    preLoad: 1.3,
+    error: require('./assets/error.png'),
+    attempt: 1
+});
 /* eslint-disable no-new */
 new Vue({
   el: '#app',
